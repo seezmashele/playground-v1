@@ -1,0 +1,198 @@
+@import 'config/base';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import 'nav';
+@import 'footer';
+@import 'components/typography.css';
+
+img:not([src]) {
+  visibility: hidden;
+}
+
+.hide_right_margin {
+  width: calc(100% + 1.5rem);
+}
+
+.hide_event_margin_bottom {
+  height: calc(100% - 1.5rem);
+}
+
+.reading_font_size {
+  font-size: 16px;
+}
+
+.post_editor_shadow {
+  box-shadow: 0 12px 24px -15px rgb(0 0 0 / 0.1);
+}
+
+@layer components {
+  body {
+    @apply bg-white transition-colors duration-500 dark:bg-neutral-950;
+  }
+
+  /* use max-w-6xl for laptop screen size */
+  .page_width_wide {
+    @apply px-8 xs:max-w-[67rem] 2xl:max-w-[77rem];
+  }
+
+  .post_width {
+    @apply px-8 xs:max-w-[58rem] 2xl:max-w-[80rem];
+  }
+
+  .page_padding_x {
+    @apply px-8;
+  }
+
+  .loader_bg_color {
+    @apply bg-neutral-200 transition-colors duration-500 dark:bg-neutral-700;
+  }
+
+  .black_border {
+    @apply border-neutral-200 transition-colors duration-500 dark:border-neutral-500;
+  }
+
+  .hover_color--neutral {
+    @apply hover:bg-neutral-100 dark:hover:bg-neutral-600;
+  }
+
+  .sidebar_width {
+    @apply xs:w-sidebar_xs 2xl:w-sidebar 2xl:max-w-sidebar;
+  }
+
+  .box_radius {
+    @apply rounded;
+  }
+
+  .button_radius {
+    @apply rounded-md;
+  }
+
+  .textfield_radius {
+    @apply rounded-md;
+  }
+
+  .dialog_radius {
+    @apply rounded-md;
+  }
+
+  .dialog_box_radius {
+    @apply rounded-xl;
+  }
+
+  .file_input_button_color {
+    @apply file:bg-neutral-200 file:bg-transparent file:transition-colors file:duration-500 dark:file:bg-neutral-800;
+  }
+
+  .container_bg_color--primary {
+    @apply bg-white transition-colors duration-500 dark:bg-black;
+  }
+
+  .container_bg_color--secondary {
+    @apply bg-neutral-50 transition-colors duration-500 dark:bg-neutral-800;
+  }
+
+  .border_color--main {
+    @apply border-neutral-150 transition-colors duration-500 dark:border-neutral-700;
+  }
+
+  .border_color--pagination {
+    @apply border-neutral-300 transition-colors duration-500 dark:border-neutral-600;
+  }
+
+  .card_author_image {
+    @apply h-5 w-5 items-center justify-center rounded-full bg-neutral-100;
+  }
+
+  .image_bg {
+    @apply bg-neutral-50 transition-colors duration-500 dark:bg-neutral-800;
+  }
+
+  .dropdown_bg {
+    @apply bg-white transition-colors duration-500 dark:bg-neutral-700;
+  }
+
+  .darkmode_transition {
+    @apply transition-colors duration-500;
+  }
+
+  .main_content_container {
+    @apply flex h-full w-full flex-col overflow-hidden pr-0;
+  }
+
+  .zoom_card_image {
+    @apply transition-all duration-500 will-change-transform;
+  }
+
+  .image_zoom_container:hover .zoom_card_image {
+    @apply scale-105;
+  }
+
+  /* cards ==================== */
+
+  .gradient_card_image {
+    @apply transition-all duration-500  will-change-transform;
+  }
+
+  .gradient_card_container:hover .gradient_card_image {
+    @apply scale-105;
+  }
+
+  .card_title {
+    @apply cursor-pointer text-xl font-bold leading-snug decoration-2 hover:underline;
+  }
+
+  .card_text {
+    @apply block h-16 w-full overflow-hidden pb-0 text-sm leading-snug;
+  }
+
+  .card_hashtag {
+    @apply mr-1 inline-block text-xs leading-snug;
+  }
+
+  .blog_title_medium {
+    @apply relative w-full pb-2 pt-1 text-2xl font-bold;
+  }
+
+  .blog_text_medium {
+    @apply block h-16 w-full overflow-hidden pb-0 text-base font-normal leading-snug;
+  }
+
+  .group_title_medium {
+    @apply relative w-full pt-1.5 pb-1 text-base font-bold;
+  }
+
+  .group_text_medium {
+    @apply block h-16 w-full pb-0 text-sm font-normal leading-snug;
+  }
+
+  .card_tags_container {
+    @apply mt-2 flex truncate text-sm;
+  }
+
+  .card_tag {
+    @apply mr-1 flex-shrink-0 cursor-pointer truncate text-xs text-neutral-500 hover:underline;
+  }
+
+  .overview_text {
+    @apply truncate text-sm;
+  }
+
+  .inline_author {
+    @apply cursor-pointer hover:underline;
+  }
+
+  .inline_publish_time {
+    @apply select-none truncate;
+  }
+
+  /* nav ======================= */
+  .nav_page_button {
+    @apply mx-2.5 mt-0.5 inline-block h-10 cursor-pointer select-none px-2;
+  }
+
+  /* spacing ======================= */
+  .content_divider {
+    @apply mb-7 w-full border-b border-neutral-100;
+  }
+}
